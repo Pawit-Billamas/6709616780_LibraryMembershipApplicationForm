@@ -17,9 +17,9 @@
 
         <!-- Main form section -->
             <form id="libraryForm">
-                <!-- Personal Information Section -->
-                <div class="form-section">
-                <h2>Personal Information</h2>
+            <!-- Personal Information Section -->
+            <div class="form-section">
+                    <h2>Personal Information</h2>
                     
                      <!-- Name section in Thai -->
                     <div class="form-group">
@@ -67,28 +67,57 @@
             <div class="form-section">
                 <h2>Academic Information</h2>
                 
-                <!-- Student ID -->
+                    <!-- Student ID -->
+                    <div class="form-group">
+                        <label for="studentId">Student ID</label>
+                        <input type="text" id="studentId" name="studentId" pattern="\d{10}" 
+                            title="Please enter a 10-digit student ID" required>
+                    </div>
+
+                    <!-- Faculty selection -->
+                    <div class="form-group">
+                        <label for="faculty">Faculty </label>
+                        <select id="faculty" name="faculty" required>
+                            <option value="computer-science">Computer Science</option>
+                            <option value="">Select your faculty</option>
+                            <option value="science">Science</option>
+                            <option value="engineering">Engineering</option>
+                            <option value="arts">Arts</option>
+                            <option value="commerce">Commerce</option>
+                            <option value="law">Law</option>
+                        </select>
+                    </div>   
+            </div>
+            <!-- Contact Information Section -->
+            <div class="form-section">
+                <h2>Contact Information</h2>
+                
+                <!-- Email -->
                 <div class="form-group">
-                    <label for="studentId">Student ID</label>
-                    <input type="text" id="studentId" name="studentId" pattern="\d{10}" 
-                           title="Please enter a 10-digit student ID" required>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
 
-                <!-- Faculty selection -->
+                <!-- Book interests -->
                 <div class="form-group">
-                    <label for="faculty">Faculty </label>
-                    <select id="faculty" name="faculty" required>
-                        <option value="computer-science">Computer Science</option>
-                        <option value="">Select your faculty</option>
-                        <option value="science">Science</option>
-                        <option value="engineering">Engineering</option>
-                        <option value="arts">Arts</option>
-                        <option value="commerce">Commerce</option>
-                        <option value="law">Law</option>
-                    </select>
-                </div>   
-            </div>
-
+                    <label>Interested Book Categories (Select at least one) </label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="fiction" name="bookInterests" value="fiction">
+                        <label for="fiction">Fiction</label>
+                        
+                        <input type="checkbox" id="nonfiction" name="bookInterests" value="nonfiction">
+                        <label for="nonfiction">Non-Fiction</label>
+                        
+                        <input type="checkbox" id="science" name="bookInterests" value="science">
+                        <label for="science">Science</label>
+                        
+                        <input type="checkbox" id="technology" name="bookInterests" value="technology">
+                        <label for="technology">Technology</label>
+                        
+                        <input type="checkbox" id="arts" name="bookInterests" value="arts">
+                        <label for="arts">Arts</label>
+                    </div>
+                </div>
 
             </form>
         </div>
