@@ -150,3 +150,88 @@ select:focus {
     display: inline-block;
 }
 
+.switch {
+    display: none;
+}
+
+.switch-label {
+    display: block;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.switch-label:before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.switch:checked + .switch-label {
+    background-color: #4CAF50;
+}
+
+.switch:checked + .switch-label:before {
+    transform: translateX(30px);
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .form-section {
+        padding: 15px;
+    }
+    
+    .checkbox-group {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }  
+    .radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .radio-group label {
+        margin-right: 0;
+    }
+}
